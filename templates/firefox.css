@@ -1,0 +1,52 @@
+destination = ~/.mozilla/firefox/xbkwovvz.default/chrome/userChrome.css
+executable = False
+---------------------------------------
+.tab-background[selected="true"] {
+  background-color: {{colors:primaryL}} !important;
+}
+
+.tab-foreground[selected="true"] {
+  color: {{colors:primaryD}} !important;
+}
+
+.tab-line[selected="true"] {
+  background-color: {{colors:primaryL}} !important;
+}
+
+.tab-background {
+  background: {{colors:primaryD}} !important;
+}
+
+#nav-bar {
+  -moz-box-ordinal-group: 1 !important;
+  border-top-width: 0 !important;
+  background: {{colors:primaryD}} !important;
+}
+
+#PersonalToolbar {
+  -moz-box-ordinal-group: 2 !important;
+  background: {{colors:primaryD}} !important;
+}
+
+#TabsToolbar {
+  -moz-box-ordinal-group: 3 !important;
+  background: {{colors:primaryD}} !important;
+}
+
+#TabsToolbar .tabbrowser-tab {
+  color: {{colors:primaryL}} !important;
+}
+
+#TabsToolbar .tabbrowser-tab[selected="true"] {
+  color: {{colors:primaryD}} !important;
+}
+
+#main-window,
+browser[type="content-primary"],
+browser[type="content"],
+tabbrowser#content,
+#content,
+browser[type="content"] > html
+{
+   background: {{colors:primaryLL}} !important;
+}

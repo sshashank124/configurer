@@ -1,0 +1,229 @@
+destination = ~/.config/polybar/config
+executable = False
+-----------------------------------------------------------
+;-------------------------------------------------------------------------------
+;	V A R I A B L E S
+;-------------------------------------------------------------------------------
+
+[colors]
+primary   = {{colors:primary}}
+primaryLL = {{colors:primaryLL}}
+primaryL  = {{colors:primaryL}}
+primaryD  = {{colors:primaryD}}
+primaryDD = {{colors:primaryDD}}
+accent    = {{colors:accent}}
+
+
+;-------------------------------------------------------------------------------
+;	B A R S
+;-------------------------------------------------------------------------------
+
+[bar/top]
+width = 100%
+height = 24
+fixed-center = true
+override-redirect = false
+wm-restack = bspwm
+
+background = ${colors.primaryDD}
+
+border-bottom-size = 2
+border-bottom-color = ${colors.primaryD}
+
+; monospace font
+font-0 = {{fonts:monospace}}:size=11:weight=bold;4
+; powerline arrow symbols
+font-1 = {{fonts:powerline}}:size=17;3
+; icons
+font-2 = {{fonts:icons}}:size=12;3
+
+modules-left = bspwm r-arrow-1 bspwmindex r-arrow-2
+modules-center = r-arrow-3 spotify l-arrow-2
+modules-right = l-arrow-1 eth l-arrow-4 wlan l-arrow-3 volume l-arrow-4 battery l-arrow-3 date
+
+
+;-------------------------------------------------------------------------------
+;	M O D U L E S
+;-------------------------------------------------------------------------------
+
+[module/bspwm]
+type = internal/bspwm
+enable-click = true
+enable-scroll = true
+pin-workspaces = false
+
+; focused = Active workspace on focused monitor
+label-focused = "  "
+label-focused-foreground = ${colors.primaryLL}
+; visible = Active workspace on any monitor
+label-occupied = "  "
+label-occupied-foreground = ${colors.primary}
+; urgent = Workspace with urgency hint set
+label-urgent = "  "
+label-urgent-foreground = ${colors.accent}
+; empty = Empty Workspace
+label-empty = "  "
+label-empty-foreground = ${colors.primary}
+; colors
+label-focused-background = ${colors.primaryD}
+label-occupied-background = ${colors.primaryD}
+label-urgent-background = ${colors.primaryD}
+label-empty-background = ${colors.primaryD}
+
+
+[module/bspwmindex]
+type = internal/bspwm
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+; only style focused
+label-focused = "%icon% "
+label-focused-foreground = ${colors.primaryD}
+; remove others
+label-occupied =
+label-urgent =
+label-empty =
+; colors
+label-focused-background = ${colors.primaryLL}
+
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/player-mpris-tail.py
+tail = true
+click-left = playerctl play-pause
+click-middle = playerctl previous
+click-right = playerctl next
+format-background = ${colors.primaryD}
+format-foreground = ${colors.primaryLL}
+
+
+[module/date]
+type = internal/date
+interval = 1
+label = " %date% %time% "
+date = "%b %d"
+time= "%I:%M:%S %p"
+format-background = ${colors.primaryD}
+format-foreground = ${colors.primaryLL}
+
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 95
+poll-interval = 20
+; charging
+label-charging = "  %percentage%"
+; discharging
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+; full
+label-full = " "
+; colors
+format-charging-background = ${colors.primaryLL}
+format-discharging-background = ${colors.primaryLL}
+format-full-background = ${colors.primaryLL}
+format-charging-foreground = ${colors.primaryD}
+format-discharging-foreground = ${colors.primaryD}
+format-full-foreground = ${colors.primaryD}
+
+
+[module/volume]
+type = internal/volume
+format-volume = <label-volume>
+label-volume = "  %percentage%"
+label-muted = "  %percentage%"
+; colors
+format-volume-background = ${colors.primaryD}
+format-volume-foreground = ${colors.primaryLL}
+format-muted-background = ${colors.primaryD}
+format-muted-foreground = ${colors.primaryLL}
+
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 5
+; connected
+label-connected = " %signal%  %essid%"
+; connected
+label-disconnected =
+; colors
+format-connected-background = ${colors.primaryLL}
+format-disconnected-background = ${colors.primaryL}
+format-connected-foreground = ${colors.primaryD}
+format-disconnected-foreground = ${colors.primaryD}
+
+
+[module/eth]
+type = internal/network
+interface = enp5s0f1
+interval = 5
+; labels
+label-connected = " "
+format-disconnected =
+;colors
+format-connected-background = ${colors.primaryD}
+format-connected-foreground = ${colors.primaryLL}
+format-disconnected-background = ${colors.primaryD}
+format-disconnected-foreground = ${colors.primaryLL}
+
+
+[settings]
+screenchange-reload = true
+
+
+;-------------------------------------------------------------------------------
+;	D E C O R A T I O N S
+;-------------------------------------------------------------------------------
+
+[module/r-arrow-1]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryD}
+content-background = ${colors.primaryLL}
+
+[module/r-arrow-2]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryLL}
+
+[module/r-arrow-3]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryDD}
+content-background = ${colors.primaryD}
+
+[module/l-arrow-1]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryD}
+
+[module/l-arrow-2]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryDD}
+content-background = ${colors.primaryD}
+
+[module/l-arrow-3]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryD}
+content-background = ${colors.primaryLL}
+
+[module/l-arrow-4]
+type = custom/text
+content = " "
+content-foreground = ${colors.primaryLL}
+content-background = ${colors.primaryD}
+
+
+; vim:ft=dosini

@@ -1,0 +1,47 @@
+destination = ~/.config/termite/config
+executable = False
+-----------------------------------------------------------
+[options]
+allow_bold = true
+clickable_url = true
+font = {{fonts:powerline}} 11
+mouse_autohide = true
+scrollback_lines = 10000
+hyperlinks = true
+browser = xdg-open
+# "system", "on" or "off"
+cursor_blink = system
+# "block", "underline" or "ibeam"
+cursor_shape = underline
+
+[colors]
+foreground = {{colors:primaryL}}
+background = {{colors:primaryDD}}
+cursor = {{colors:primary}}
+cursor_foreground = {{colors:primary}}
+highlight  = {{colors:primaryD}}
+
+# black
+color0  = {{colors:black}}
+color8  = {{colors:primaryDD}}
+# red
+color1  = {{colors:red}}
+color9  = {{colors:red}}
+# green
+color2  = {{colors:green}}
+color10 = {{colors:green}}
+# yellow
+color3  = {{colors:yellow}}
+color11 = {{colors:yellow}}
+# blue
+color4  = {{colors:blue}}
+color12 = {{colors:blue}}
+# magenta
+color5  = {{colors:pink}}
+color13 = {{colors:pink}}
+# cyan
+color6  = {{colors:cyan}}
+color14 = {{colors:cyan}}
+# white
+color7  = {{colors:primaryLL}}
+color15 = {{colors:white}}
