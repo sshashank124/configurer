@@ -40,7 +40,7 @@ def parse_arguments():
     if args.quiet: LOG_WARNINGS = False
     return vars(args)
 
-def load_colors(filename):
+def load_config(filename):
     try:
         parser = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
         return parser.read(filename) and parser
@@ -77,12 +77,8 @@ def required_params_present(params):
     return True
 
 def replace_placeholders_with_data(template, data):
-    def replace_on_match(match):
-        section = 'DEFAULT'
-        if match.group(1): section = match.group(1)[:-1]
-        return data[section][match.group(2)]
     try:
-        return re.sub(r'{{(\w*?:)?(\w*?)}}', replace_on_match, template)
+        return re.sub(r'{{(\w*?):(\w*?)}}', lambda m: data[m.group(1)][m.group(2)], template)
     except KeyError as e: return None
 
 def make_file_executable(filename):
@@ -105,7 +101,7 @@ def refresh(refresh_script):
 def main():
     args = parse_arguments()
 
-    theme_config = load_colors(args[ARG_CONFIG_FILE])
+    theme_config = load_config(args[ARG_CONFIG_FILE])
     not theme_config and quit("Invalid config file '{}'", args[ARG_CONFIG_FILE])
 
     template_files = get_template_files(args[ARG_TEMPLATES_DIR])
