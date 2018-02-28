@@ -3,7 +3,6 @@
 Normal Desktop               |  Lock Screen
 :---------------------------:|:---------------------------:
 ![](images/blue.png)         |  ![](images/blue_lock.png)
------------------------------|-----------------------------
 ![](images/brown.png)        |  ![](images/brown_lock.png)
 
 `styler.py` uses 3 main resources to allow for automating configuration of certain parameters for various config files
