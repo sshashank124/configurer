@@ -2,7 +2,7 @@ destination = ~/.config/change_system_state/change_state.sh
 executable = True
 -----------------------------------------------------------
 #! /bin/sh
-states="Shutdown|Restart|Lock|Suspend|Logout"
+states="Lock|Suspend|Logout|Shutdown|Restart"
 
 res=$(echo "$states" | rofi -sep "|" -color-window "{{colors:primaryDD}}, {{colors:accent}}, {{colors:primaryDD}}" -color-normal "{{colors:primaryDD}}, {{colors:primary}}, {{colors:primaryDD}}, {{colors:accent}}, {{colors:primaryD}}" -dmenu -p ":" -i -lines 5)
 
