@@ -158,7 +158,7 @@ label-connected = " %signal%  %essid%"
 label-disconnected =
 ; colors
 format-connected-background = ${colors.primaryLL}
-format-disconnected-background = ${colors.primaryL}
+format-disconnected-background = ${colors.primaryLL}
 format-connected-foreground = ${colors.primaryD}
 format-disconnected-foreground = ${colors.primaryD}
 

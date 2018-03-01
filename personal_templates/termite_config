@@ -15,7 +15,7 @@ cursor_blink = system
 cursor_shape = underline
 
 [colors]
-foreground = {{colors:primaryL}}
+foreground = {{colors:primaryLL}}
 background = {{colors:primaryDD}}
 cursor = {{colors:primary}}
 cursor_foreground = {{colors:primary}}

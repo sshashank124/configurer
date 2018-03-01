@@ -2,7 +2,7 @@ destination = ~/.mozilla/firefox/xbkwovvz.default/chrome/userChrome.css
 executable = False
 ---------------------------------------
 .tab-background[selected="true"] {
-  background-color: {{colors:primaryL}} !important;
+  background-color: {{colors:primaryLL}} !important;
 }
 
 .tab-foreground[selected="true"] {
