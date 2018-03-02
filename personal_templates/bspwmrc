@@ -9,10 +9,10 @@ $XDG_CONFIG_HOME/sxhkd/launch.sh
 # configure bspwm
 bspc config remove_unplugged_monitors  true
 bspc config merge_overlapping_monitors true
-bspc monitor -d 1 2 3 4
+bspc monitor -d 1 2 3 4 5
 
 bspc config border_width  2
-bspc config window_gap    12
+bspc config window_gap    10
 bspc config split_ratio   0.5
 
 bspc config borderless_monocle  true

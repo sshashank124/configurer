@@ -25,23 +25,23 @@ highlight  = {{colors:primaryD}}
 color0  = {{colors:black}}
 color8  = {{colors:primaryDD}}
 # red
-color1  = {{colors:red}}
-color9  = {{colors:red}}
+color1  = {{colors:redL}}
+color9  = {{colors:redL}}
 # green
-color2  = {{colors:green}}
-color10 = {{colors:green}}
+color2  = {{colors:greenL}}
+color10 = {{colors:greenL}}
 # yellow
-color3  = {{colors:yellow}}
-color11 = {{colors:yellow}}
+color3  = {{colors:yellowL}}
+color11 = {{colors:yellowL}}
 # blue
-color4  = {{colors:blue}}
-color12 = {{colors:blue}}
+color4  = {{colors:blueL}}
+color12 = {{colors:blueL}}
 # magenta
-color5  = {{colors:pink}}
-color13 = {{colors:pink}}
+color5  = {{colors:pinkL}}
+color13 = {{colors:pinkL}}
 # cyan
-color6  = {{colors:cyan}}
-color14 = {{colors:cyan}}
+color6  = {{colors:cyanL}}
+color14 = {{colors:cyanL}}
 # white
 color7  = {{colors:primaryLL}}
 color15 = {{colors:white}}
