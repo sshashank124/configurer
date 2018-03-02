@@ -3,6 +3,9 @@ executable = True
 -----------------------------------------------------------
 #! /bin/sh
 
+# set appropriate display output
+$XDG_CONFIG_HOME/display/auto_display.sh
+
 # start hotkey daemon
 $XDG_CONFIG_HOME/sxhkd/launch.sh
 
