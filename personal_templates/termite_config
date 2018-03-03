@@ -16,32 +16,32 @@ cursor_shape = underline
 
 [colors]
 foreground = {{colors:primaryLL}}
-background = {{colors:primaryDD}}
+background = {{colors:primaryDDD}}
 cursor = {{colors:primary}}
 cursor_foreground = {{colors:primary}}
 highlight  = {{colors:primaryD}}
 
 # black
 color0  = {{colors:black}}
-color8  = {{colors:primaryDD}}
+color8  = {{colors:primaryDDD}}
 # red
-color1  = {{colors:redL}}
-color9  = {{colors:redL}}
+color1  = {{colors:primaryLL}}
+color9  = {{colors:primaryLL}}
 # green
-color2  = {{colors:greenL}}
-color10 = {{colors:greenL}}
+color2  = {{colors:primaryD}}
+color10 = {{colors:primaryD}}
 # yellow
-color3  = {{colors:yellowL}}
-color11 = {{colors:yellowL}}
+color3  = {{colors:primaryLLL}}
+color11 = {{colors:primaryLLL}}
 # blue
-color4  = {{colors:blueL}}
-color12 = {{colors:blueL}}
+color4  = {{colors:primaryD}}
+color12 = {{colors:primaryD}}
 # magenta
-color5  = {{colors:pinkL}}
-color13 = {{colors:pinkL}}
+color5  = {{colors:primary}}
+color13 = {{colors:primary}}
 # cyan
-color6  = {{colors:cyanL}}
-color14 = {{colors:cyanL}}
+color6  = {{colors:primaryLL}}
+color14 = {{colors:primaryLL}}
 # white
-color7  = {{colors:primaryLL}}
+color7  = {{colors:primaryLLL}}
 color15 = {{colors:white}}

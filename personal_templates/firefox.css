@@ -2,43 +2,43 @@ destination = ~/.mozilla/firefox/xbkwovvz.default/chrome/userChrome.css
 executable = False
 ---------------------------------------
 .tab-background[selected="true"] {
-  background-color: {{colors:primaryLL}} !important;
+  background-color: {{colors:primaryLLL}} !important;
 }
 
 .tab-foreground[selected="true"] {
-  color: {{colors:primaryD}} !important;
+  color: {{colors:primaryDD}} !important;
 }
 
 .tab-line[selected="true"] {
-  background-color: {{colors:primaryL}} !important;
+  background-color: {{colors:primaryLLL}} !important;
 }
 
 .tab-background {
-  background: {{colors:primaryD}} !important;
+  background: {{colors:primaryDD}} !important;
 }
 
 #nav-bar {
   -moz-box-ordinal-group: 1 !important;
   border-top-width: 0 !important;
-  background: {{colors:primaryD}} !important;
+  background: {{colors:primaryDD}} !important;
 }
 
 #PersonalToolbar {
   -moz-box-ordinal-group: 2 !important;
-  background: {{colors:primaryD}} !important;
+  background: {{colors:primaryDD}} !important;
 }
 
 #TabsToolbar {
   -moz-box-ordinal-group: 3 !important;
-  background: {{colors:primaryD}} !important;
+  background: {{colors:primaryDD}} !important;
 }
 
 #TabsToolbar .tabbrowser-tab {
-  color: {{colors:primaryL}} !important;
+  color: {{colors:primaryLLL}} !important;
 }
 
 #TabsToolbar .tabbrowser-tab[selected="true"] {
-  color: {{colors:primaryD}} !important;
+  color: {{colors:primaryDD}} !important;
 }
 
 #main-window,
@@ -48,5 +48,5 @@ tabbrowser#content,
 #content,
 browser[type="content"] > html
 {
-   background: {{colors:primaryLL}} !important;
+   background: {{colors:primaryLLL}} !important;
 }

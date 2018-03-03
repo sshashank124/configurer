@@ -4,7 +4,7 @@ executable = True
 #! /bin/sh
 states="Lock|Suspend|Logout|Shutdown|Restart"
 
-res=$(echo "$states" | rofi -sep "|" -color-window "{{colors:primaryDD}}, {{colors:accent}}, {{colors:primaryDD}}" -color-normal "{{colors:primaryDD}}, {{colors:primary}}, {{colors:primaryDD}}, {{colors:accent}}, {{colors:primaryD}}" -dmenu -p ":" -i -lines 5)
+res=$(echo "$states" | rofi -sep "|" -color-window "{{colors:primaryDDD}}, {{colors:primaryD}}, {{colors:primaryDDD}}" -color-normal "{{colors:primaryDDD}}, {{colors:primaryL}}, {{colors:primaryDDD}}, {{colors:accent}}, {{colors:primaryDD}}" -dmenu -p ":" -i -lines 5)
 
 sleep 0.2
 

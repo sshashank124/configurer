@@ -2,8 +2,8 @@ destination = ~/.config/rofi/config
 executable = False
 -----------------------------------------------------------
 rofi.color-enabled   : true
-rofi.color-window    : {{colors:primaryDD}}, {{colors:primary}}, {{colors:primaryDD}}
-rofi.color-normal    : {{colors:primaryDD}}, {{colors:primary}}, {{colors:primaryDD}}, {{colors:primaryD}}, {{colors:primaryLL}}
+rofi.color-window    : {{colors:primaryDDD}}, {{colors:primaryD}}, {{colors:primaryDDD}}
+rofi.color-normal    : {{colors:primaryDDD}}, {{colors:primaryL}}, {{colors:primaryDDD}}, {{colors:primaryLL}}, {{colors:primaryDD}}
 rofi.font            : {{fonts:monospace}} 14
 rofi.lines           : 6
 rofi.padding         : 16
