@@ -6,14 +6,17 @@ executable = False
 ;-------------------------------------------------------------------------------
 
 [colors]
-primaryLLL = {{colors:primaryLLL}}
-primaryLL  = {{colors:primaryLL}}
-primaryL   = {{colors:primaryL}}
-primary    = {{colors:primary}}
-primaryD   = {{colors:primaryD}}
-primaryDD  = {{colors:primaryDD}}
-primaryDDD = {{colors:primaryDDD}}
-accent    = {{colors:accent}}
+bg         = {{colors:primaryDDD}}
+neutral    = {{colors:primary}}
+accent     = {{colors:accent}}
+
+; Binary color scheme for modules
+module1-bg = {{colors:primaryD}}
+module1-fg = {{colors:primaryLLL}}
+module2-bg = {{colors:primaryLLL}}
+module2-fg = {{colors:primaryD}}
+module-center-bg = {{colors:primaryD}}
+module-center-fg = {{colors:primaryLLL}}
 
 
 ;-------------------------------------------------------------------------------
@@ -27,10 +30,10 @@ fixed-center = true
 override-redirect = false
 wm-restack = bspwm
 
-background = ${colors.primaryDDD}
+background = ${colors.bg}
 
 border-bottom-size = 2
-border-bottom-color = ${colors.primaryD}
+border-bottom-color = ${colors.module1-bg}
 
 ; monospace font
 font-0 = {{fonts:monospace}}:size=11:weight=bold;4
@@ -56,21 +59,21 @@ pin-workspaces = false
 
 ; focused = Active workspace on focused monitor
 label-focused = "  "
-label-focused-foreground = ${colors.primaryLLL}
+label-focused-foreground = ${colors.module1-fg}
 ; visible = Active workspace on any monitor
 label-occupied = "  "
-label-occupied-foreground = ${colors.primary}
+label-occupied-foreground = ${colors.neutral}
 ; urgent = Workspace with urgency hint set
 label-urgent = "  "
 label-urgent-foreground = ${colors.accent}
 ; empty = Empty Workspace
 label-empty = "  "
-label-empty-foreground = ${colors.primary}
+label-empty-foreground = ${colors.neutral}
 ; colors
-label-focused-background = ${colors.primaryD}
-label-occupied-background = ${colors.primaryD}
-label-urgent-background = ${colors.primaryD}
-label-empty-background = ${colors.primaryD}
+label-focused-background = ${colors.module1-bg}
+label-occupied-background = ${colors.module1-bg}
+label-urgent-background = ${colors.module1-bg}
+label-empty-background = ${colors.module1-bg}
 
 
 [module/bspwmindex]
@@ -82,13 +85,13 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ; only style focused
 label-focused = "%icon% "
-label-focused-foreground = ${colors.primaryD}
+label-focused-foreground = ${colors.module2-fg}
 ; remove others
 label-occupied =
 label-urgent =
 label-empty =
 ; colors
-label-focused-background = ${colors.primaryLLL}
+label-focused-background = ${colors.module2-bg}
 
 
 [module/spotify]
@@ -98,8 +101,8 @@ tail = true
 click-left = playerctl play-pause
 click-middle = playerctl previous
 click-right = playerctl next
-format-background = ${colors.primaryD}
-format-foreground = ${colors.primaryLLL}
+format-background = ${colors.module-center-bg}
+format-foreground = ${colors.module-center-fg}
 
 
 [module/date]
@@ -108,8 +111,8 @@ interval = 1
 label = " %date% %time% "
 date = "%b %d"
 time= "%I:%M:%S %p"
-format-background = ${colors.primaryD}
-format-foreground = ${colors.primaryLLL}
+format-background = ${colors.module1-bg}
+format-foreground = ${colors.module1-fg}
 
 
 [module/battery]
@@ -131,12 +134,12 @@ ramp-capacity-4 = " "
 ; full
 label-full = " "
 ; colors
-format-charging-background = ${colors.primaryLLL}
-format-discharging-background = ${colors.primaryLLL}
-format-full-background = ${colors.primaryLLL}
-format-charging-foreground = ${colors.primaryD}
-format-discharging-foreground = ${colors.primaryD}
-format-full-foreground = ${colors.primaryD}
+format-charging-background = ${colors.module2-bg}
+format-discharging-background = ${colors.module2-bg}
+format-full-background = ${colors.module2-bg}
+format-charging-foreground = ${colors.module2-fg}
+format-discharging-foreground = ${colors.module2-fg}
+format-full-foreground = ${colors.module2-fg}
 
 
 [module/volume]
@@ -145,10 +148,10 @@ format-volume = <label-volume>
 label-volume = "  %percentage%"
 label-muted = "  %percentage%"
 ; colors
-format-volume-background = ${colors.primaryD}
-format-volume-foreground = ${colors.primaryLLL}
-format-muted-background = ${colors.primaryD}
-format-muted-foreground = ${colors.primaryLLL}
+format-volume-background = ${colors.module1-bg}
+format-volume-foreground = ${colors.module1-fg}
+format-muted-background = ${colors.module1-bg}
+format-muted-foreground = ${colors.module1-fg}
 
 
 [module/wlan]
@@ -160,10 +163,10 @@ label-connected = " %signal%  %essid%"
 ; connected
 label-disconnected =
 ; colors
-format-connected-background = ${colors.primaryLLL}
-format-disconnected-background = ${colors.primaryLLL}
-format-connected-foreground = ${colors.primaryD}
-format-disconnected-foreground = ${colors.primaryD}
+format-connected-background = ${colors.module2-bg}
+format-disconnected-background = ${colors.module2-bg}
+format-connected-foreground = ${colors.module2-fg}
+format-disconnected-foreground = ${colors.module2-fg}
 
 
 [module/eth]
@@ -174,10 +177,10 @@ interval = 5
 label-connected = " "
 format-disconnected =
 ;colors
-format-connected-background = ${colors.primaryD}
-format-connected-foreground = ${colors.primaryLLL}
-format-disconnected-background = ${colors.primaryD}
-format-disconnected-foreground = ${colors.primaryLLL}
+format-connected-background = ${colors.module1-bg}
+format-connected-foreground = ${colors.module1-fg}
+format-disconnected-background = ${colors.module1-bg}
+format-disconnected-foreground = ${colors.module1-fg}
 
 
 [settings]
@@ -191,42 +194,44 @@ screenchange-reload = true
 [module/r-arrow-1]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryD}
-content-background = ${colors.primaryLLL}
+content-foreground = ${colors.module1-bg}
+content-background = ${colors.module2-bg}
 
 [module/r-arrow-2]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryLLL}
+content-foreground = ${colors.module2-bg}
+content-background = ${colors.bg}
 
 [module/r-arrow-3]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryDDD}
-content-background = ${colors.primaryD}
+content-foreground = ${colors.bg}
+content-background = ${colors.module-center-bg}
 
 [module/l-arrow-1]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryD}
+content-foreground = ${colors.module1-bg}
+content-background = ${colors.bg}
 
 [module/l-arrow-2]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryDDD}
-content-background = ${colors.primaryD}
+content-foreground = ${colors.bg}
+content-background = ${colors.module-center-bg}
 
 [module/l-arrow-3]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryD}
-content-background = ${colors.primaryLLL}
+content-foreground = ${colors.module1-bg}
+content-background = ${colors.module2-bg}
 
 [module/l-arrow-4]
 type = custom/text
 content = " "
-content-foreground = ${colors.primaryLLL}
-content-background = ${colors.primaryD}
+content-foreground = ${colors.module2-bg}
+content-background = ${colors.module1-bg}
 
 
 ; vim:ft=dosini
