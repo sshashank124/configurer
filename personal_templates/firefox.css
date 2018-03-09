@@ -20,17 +20,17 @@ executable = False
 #nav-bar {
   -moz-box-ordinal-group: 1 !important;
   border-top-width: 0 !important;
-  background: {{colors:primaryDD}} !important;
+  background: {{colors:primaryDDD}} !important;
 }
 
 #PersonalToolbar {
   -moz-box-ordinal-group: 2 !important;
-  background: {{colors:primaryDD}} !important;
+  background: {{colors:primaryDDD}} !important;
 }
 
 #TabsToolbar {
   -moz-box-ordinal-group: 3 !important;
-  background: {{colors:primaryDD}} !important;
+  background: {{colors:primaryDDD}} !important;
 }
 
 #TabsToolbar .tabbrowser-tab {
@@ -46,7 +46,44 @@ browser[type="content-primary"],
 browser[type="content"],
 tabbrowser#content,
 #content,
-browser[type="content"] > html
-{
+browser[type="content"] > html {
    background: {{colors:primaryLLL}} !important;
 }
+
+#urlbar {
+  background-color: {{colors:primaryDD}} !important;
+  color: {{colors:primaryLLL}} !important;
+}
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #PopupAutoCompleteRichResult {
+    border: 0 !important;
+  }
+    
+  #PopupAutoCompleteRichResult .autocomplete-richlistbox {
+    background-color: {{colors:primaryDDD}} !important;
+    margin: 0 !important;
+  }
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem {
+    border-bottom-color: {{colors:primaryDDD}} !important;
+  }
+  .autocomplete-richlistitem .ac-title, 
+  .autocomplete-richlistitem .ac-action,
+  .autocomplete-richlistitem .ac-separator {
+    color: {{colors:primaryLL}} !important;
+  }
+  .autocomplete-richlistitem[selected=true] {
+    background-color: {{colors:primaryD}} !important;
+  }
+  .autocomplete-richlistitem[selected=true] .ac-title, 
+  .ac-title[selected],
+  .autocomplete-richlistitem[selected=true] .ac-action,
+  .ac-action[selected],
+  .autocomplete-richlistitem[selected=true] .ac-separator,
+  .ac-separator[selected] {
+    color: {{colors:primaryLLL}} !important;
+  }
+  .autocomplete-richlistitem[selected=true] .ac-url, 
+  .ac-url[selected] {
+    color: {{colors:accent}} !important;
+  }
