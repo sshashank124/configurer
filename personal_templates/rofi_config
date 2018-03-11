@@ -3,7 +3,7 @@ executable = False
 -----------------------------------------------------------
 rofi.color-enabled   : true
 rofi.color-window    : {{colors:primaryDDD}}, {{colors:primaryD}}, {{colors:primaryDDD}}
-rofi.color-normal    : {{colors:primaryDDD}}, {{colors:primaryL}}, {{colors:primaryDDD}}, {{colors:primaryLL}}, {{colors:primaryDD}}
+rofi.color-normal    : {{colors:primaryDDD}}, {{colors:primaryL}}, {{colors:primaryDDD}}, {{colors:primaryD}}, {{colors:primaryLLL}}
 rofi.font            : {{fonts:monospace}} 14
 rofi.lines           : 6
 rofi.padding         : 16
