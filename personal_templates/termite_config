@@ -31,17 +31,17 @@ color9  = {{colors:primaryLL}}
 color2  = {{colors:primaryD}}
 color10 = {{colors:primaryD}}
 # yellow
-color3  = {{colors:primaryLLL}}
-color11 = {{colors:primaryLLL}}
+color3  = {{colors:primaryL}}
+color11 = {{colors:primaryL}}
 # blue
 color4  = {{colors:primaryD}}
 color12 = {{colors:primaryD}}
 # magenta
-color5  = {{colors:primary}}
-color13 = {{colors:primary}}
+color5  = {{colors:primaryL}}
+color13 = {{colors:primaryL}}
 # cyan
-color6  = {{colors:primaryLL}}
-color14 = {{colors:primaryLL}}
+color6  = {{colors:primaryLLL}}
+color14 = {{colors:primaryLLL}}
 # white
 color7  = {{colors:primaryLLL}}
 color15 = {{colors:white}}
