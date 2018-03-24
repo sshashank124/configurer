@@ -37,6 +37,7 @@ $XDG_CONFIG_HOME/compton/launch.sh
 $XDG_CONFIG_HOME/wallpapers/launch.sh
 #$XDG_CONFIG_HOME/redshift/launch.sh
 xsetroot -cursor_name left_ptr
+setxkbmap -option ctrl:nocaps
 
 # set window rules
 bspc rule -a "Termite:drop-in terminal" state=floating center=on
