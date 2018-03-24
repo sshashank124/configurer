@@ -1,10 +1,10 @@
 destination = ~/.config/change_system_state/change_state.sh
 executable = True
 -----------------------------------------------------------
-#! /bin/sh
+#! /bin/zsh
 states="Lock|Suspend|Logout|Shutdown|Restart"
 
-res=$(echo "$states" | rofi -sep "|" -color-window "{{colors:primaryDDD}}, {{colors:primaryD}}, {{colors:primaryDDD}}" -color-normal "{{colors:primaryDDD}}, {{colors:primaryL}}, {{colors:primaryDDD}}, {{colors:accent}}, {{colors:primaryDD}}" -dmenu -p ":" -i -lines 5)
+res=$(echo "$states" | {{cmd:rofi}} -sep "|" -p "System")
 
 sleep 0.2
 

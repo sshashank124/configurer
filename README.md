@@ -5,17 +5,17 @@ Normal Desktop               |  Lock Screen
 ![](images/blue.png)         |  ![](images/blue_lock.png)
 ![](images/brown.png)        |  ![](images/brown_lock.png)
 
-`styler.py` uses 3 main resources to allow for automating configuration of certain parameters for various config files
+`configurer.py` uses 3 main resources to allow for automating configuration of certain parameters for various config files
  1. `CONFIG_FILE`: A file that specifies the key/value pairs to be used for template substitution
  2. `TEMPLATES_DIR`: A directory containing all the template files to be processed and generated
  3. `REFRESH_SCRIPT`: An optional executable script to allow for reloading/updating/refreshing any programs using the newly generated templates
 
-> NOTE: `styler.py` processes all the templates in `TEMPLATES_DIR` and skips any template with either missing or malformed parameters or placeholders
+> NOTE: `configurer.py` processes all the templates in `TEMPLATES_DIR` and skips any template with either missing or malformed parameters or placeholders
 
 ## Usage
 ### Command line options
 ```
-usage: styler.py [-h] [-c CONFIG_FILE] [-t TEMPLATES_DIR] [-r REFRESH_SCRIPT]
+usage: configurer.py [-h] [-c CONFIG_FILE] [-t TEMPLATES_DIR] [-r REFRESH_SCRIPT]
                  [-q]
 
 optional arguments:
@@ -34,11 +34,11 @@ optional arguments:
 ```
 
 ### Examples
-`$ styler.py`: Use the default names (config file, templates directory and optionally reload script should be present in the current director)
+`$ configurer.py`: Use the default names (config file, templates directory and optionally reload script should be present in the current director)
 
-`$ styler.py -q`: Don't print warning messages (will still print error messages to `stderr`)
+`$ configurer.py -q`: Don't print warning messages (will still print error messages to `stderr`)
 
-`$ styler.py -c ~/.config/styler/config.ini --templates_dir ~/.config/styler/templates -r ~/.config/bspwm/refresh.sh`
+`$ configurer.py -c ~/.config/configurer/config.ini --templates_dir ~/.config/configurer/templates -r ~/.config/bspwm/refresh.sh`
 
 # Configuration
 ### Config file
@@ -65,7 +65,7 @@ fonts     = FontAwesome
 ```
 
 ### Templates
-A template is a copy of a resource configuration file for a specific program with placeholders in place of values to be populated using the `CONFIG_FILE`. All templates must be stored within the `TEMPLATES_DIR` directory. The name of the template file can be arbitrary as the name of the final generated file will be specified within the template file. All templates need to start with a section of parameters (in the form of `key = value`) for `styler` to use. Currently there are two required template parameters:
+A template is a copy of a resource configuration file for a specific program with placeholders in place of values to be populated using the `CONFIG_FILE`. All templates must be stored within the `TEMPLATES_DIR` directory. The name of the template file can be arbitrary as the name of the final generated file will be specified within the template file. All templates need to start with a section of parameters (in the form of `key = value`) for `configurer` to use. Currently there are two required template parameters:
 
  1. `destination`: to specify where to save the generated file
  2. `executable`: to specify whether or not to make the file executable (such as in the case of `.sh` files)

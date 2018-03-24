@@ -36,11 +36,11 @@ border-bottom-size = 2
 border-bottom-color = ${colors.module1-bg}
 
 ; monospace font
-font-0 = {{fonts:monospace}}:size=11:weight=bold;4
+font-0 = {{fonts:monospace}}:size=10:weight=bold;3
 ; powerline arrow symbols
 font-1 = {{fonts:powerline}}:size=17;3
 ; icons
-font-2 = {{fonts:icons}}:size=12;3
+font-2 = {{fonts:icons}}:size=11;3
 
 modules-left = bspwm r-arrow-1 bspwmindex r-arrow-2
 modules-center = r-arrow-3 spotify l-arrow-2
