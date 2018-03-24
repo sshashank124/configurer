@@ -4,7 +4,7 @@ executable = True
 #! /bin/zsh
 states="Lock|Suspend|Logout|Shutdown|Restart"
 
-res=$(echo "$states" | {{cmd:rofi}} -sep "|" -p "System")
+res=$(echo "$states" | {{cmd:rofi_dmenu}} -sep "|" -p "System")
 
 sleep 0.2
 

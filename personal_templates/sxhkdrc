@@ -1,6 +1,6 @@
 destination = ~/.config/sxhkd/sxhkdrc
 executable = False
------------------------------------------------
+-------------------------------------------------
 # termite
 super + w
 	termite
@@ -22,7 +22,11 @@ super + v
 
 # launchers
 super + r
-  j4-dmenu-desktop --no-generic --dmenu='{{cmd:rofi}} -p "App"'
+  j4-dmenu-desktop --no-generic --dmenu='{{cmd:rofi_dmenu}} -p "App"'
+
+# wifi
+super + n
+  $XDG_CONFIG_HOME/networking/network_menu.sh
 
 {super + BackSpace,@XF86PowerOff}
   $XDG_CONFIG_HOME/change_system_state/change_state.sh

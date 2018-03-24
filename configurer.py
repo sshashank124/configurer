@@ -113,7 +113,7 @@ def main():
             themed_res = replace_placeholders_with_data(template, theme_config)
             if themed_res:
                 save_configured_resource(themed_res, params['destination'], params['executable'])
-            else: warn("Invalid placeholder {} found in template '{}'", e, template_filename)
+            else: warn("Invalid placeholder found in template '{}'", template_filename)
         else: warn("Invalid or malformed parameters in template '{}'", template_filename)
 
     if args[ARG_REFRESH_SCRIPT]:
