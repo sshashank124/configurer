@@ -31,7 +31,7 @@ super + n
 {super + BackSpace,@XF86PowerOff}
   $XDG_CONFIG_HOME/change_system_state/change_state.sh
 
-super + apostrophe
+XF86Display
   $XDG_CONFIG_HOME/display/change_display.sh
 
 # volume and music
